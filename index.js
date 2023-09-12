@@ -14,6 +14,7 @@ const usersRoute = require("./routes/users");
 dotenv.config();
 
 // Connect to database
+mongoose.set("strictQuery", false);
 mongoose.connect(process.env.DB_CONNECT, () =>
   console.log("Connected to database...")
 );
